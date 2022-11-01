@@ -17,8 +17,24 @@
             "supportsES6": true,
             "typescriptThreePlus": true
           },
-          "templateDir": "#{cwd}/templates/typescript-fetch2/"
+          "templateDir": "#{cwd}/templates/typescript-fetch/"
+        },
+        "fetch-client-2": {
+          "generatorName": "typescript-fetch",
+          "output": "#{cwd}/modules/typescript-fetch-modern",
+          "glob": "v2.json",
+          "additionalProperties": {
+            "npmName": "@asdf/typescript-fetch-modern",
+            "allowUnicodeIdentifiers": true,
+            "enumPropertyNaming": "original",
+            "modelPropertyNaming": "original",
+            "paramNaming": "original",
+            "supportsES6": true,
+            "typescriptThreePlus": true
+          },
+          "templateDir": "#{cwd}/templates/typescript-fetch-modern/"
         }
+
       }      
     }
 }
