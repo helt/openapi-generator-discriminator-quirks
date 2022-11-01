@@ -1,0 +1,14 @@
+{
+  "name": "@asdf/typescript-fetch",
+  "version": "1.0.0",
+  "description": "OpenAPI client for @asdf/typescript-fetch",
+  "author": "OpenAPI-Generator",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
+}
