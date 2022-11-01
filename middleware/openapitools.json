@@ -15,8 +15,7 @@
           "paramNaming": "original",
           "supportsES6": true,
           "typescriptThreePlus": true
-        },
-        "templateDir": "#{cwd}/templates/typescript-fetch-modern/"
+        }
       },
       "fetch-client-2": {
         "generatorName": "typescript-fetch",
@@ -30,8 +29,7 @@
           "paramNaming": "original",
           "supportsES6": true,
           "typescriptThreePlus": true
-        },
-        "templateDir": "#{cwd}/templates/typescript-fetch-modern/"
+        }
       }
     }
   },
