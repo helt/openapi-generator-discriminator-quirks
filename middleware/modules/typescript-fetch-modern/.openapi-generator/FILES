@@ -1,0 +1,16 @@
+.gitignore
+.npmignore
+.openapi-generator-ignore
+README.md
+package.json
+src/apis/BoundaryApi.ts
+src/apis/index.ts
+src/index.ts
+src/models/Animal.ts
+src/models/Fish.ts
+src/models/Mammal.ts
+src/models/MammalAllOf.ts
+src/models/index.ts
+src/runtime.ts
+tsconfig.esm.json
+tsconfig.json
