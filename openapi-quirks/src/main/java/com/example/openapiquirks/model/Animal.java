@@ -8,7 +8,7 @@ import io.swagger.v3.oas.annotations.media.DiscriminatorMapping;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @JsonTypeName("animal")
-@JsonTypeInfo(property = "@fantatsticClass", use = JsonTypeInfo.Id.NAME)
+@JsonTypeInfo(property = "awesomeTypeInfoAndDiscriminator", use = JsonTypeInfo.Id.NAME)
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Mammal.class),
         @JsonSubTypes.Type(value = Fish.class),
@@ -17,7 +17,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
         subTypes = {
                 Mammal.class, Fish.class
         },
-        discriminatorProperty = "@fantatsticClass",
+        discriminatorProperty = "awesomeTypeInfoAndDiscriminator",
         discriminatorMapping = {
                 @DiscriminatorMapping(schema = Mammal.class, value = "mammal"),
                 @DiscriminatorMapping(schema = Fish.class, value = "fish")

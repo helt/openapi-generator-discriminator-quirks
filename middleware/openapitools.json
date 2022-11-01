@@ -1,40 +1,39 @@
 {
-    "$schema": "node_modules/@openapitools/openapi-generator-cli/config.schema.json",
-    "spaces": 2,
-    "generator-cli": {
-      "version": "6.2.0",
-      "generators": {
-        "fetch-client": {
-          "generatorName": "typescript-fetch",
-          "output": "#{cwd}/modules/typescript-fetch",
-          "glob": "v2.json",
-          "additionalProperties": {
-            "npmName": "@asdf/typescript-fetch",
-            "allowUnicodeIdentifiers": true,
-            "enumPropertyNaming": "original",
-            "modelPropertyNaming": "original",
-            "paramNaming": "original",
-            "supportsES6": true,
-            "typescriptThreePlus": true
-          },
-          "templateDir": "#{cwd}/templates/typescript-fetch/"
+  "$schema": "node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "generator-cli": {
+    "version": "6.2.0",
+    "generators": {
+      "fetch-client": {
+        "generatorName": "typescript-fetch",
+        "output": "#{cwd}/modules/typescript-fetch-bad",
+        "glob": "openapi-bad.json",
+        "additionalProperties": {
+          "npmName": "@asdf/typescript-fetch-bad",
+          "allowUnicodeIdentifiers": true,
+          "enumPropertyNaming": "original",
+          "modelPropertyNaming": "original",
+          "paramNaming": "original",
+          "supportsES6": true,
+          "typescriptThreePlus": true
         },
-        "fetch-client-2": {
-          "generatorName": "typescript-fetch",
-          "output": "#{cwd}/modules/typescript-fetch-modern",
-          "glob": "v2.json",
-          "additionalProperties": {
-            "npmName": "@asdf/typescript-fetch-modern",
-            "allowUnicodeIdentifiers": true,
-            "enumPropertyNaming": "original",
-            "modelPropertyNaming": "original",
-            "paramNaming": "original",
-            "supportsES6": true,
-            "typescriptThreePlus": true
-          },
-          "templateDir": "#{cwd}/templates/typescript-fetch-modern/"
-        }
-
-      }      
+        "templateDir": "#{cwd}/templates/typescript-fetch-modern/"
+      },
+      "fetch-client-2": {
+        "generatorName": "typescript-fetch",
+        "output": "#{cwd}/modules/typescript-fetch-good",
+        "glob": "openapi-good.json",
+        "additionalProperties": {
+          "npmName": "@asdf/typescript-fetch-good",
+          "allowUnicodeIdentifiers": true,
+          "enumPropertyNaming": "original",
+          "modelPropertyNaming": "original",
+          "paramNaming": "original",
+          "supportsES6": true,
+          "typescriptThreePlus": true
+        },
+        "templateDir": "#{cwd}/templates/typescript-fetch-modern/"
+      }
     }
+  },
+  "spaces": 2
 }

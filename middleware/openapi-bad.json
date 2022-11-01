@@ -1,0 +1,91 @@
+{
+  "components": {
+    "schemas": {
+      "Animal": {
+        "discriminator": {
+          "mapping": {
+            "fish": "#/components/schemas/Fish",
+            "mammal": "#/components/schemas/Mammal"
+          },
+          "propertyName": "@fantatsticClass"
+        },
+        "properties": {
+          "@fantatsticClass": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        },
+        "required": ["@fantatsticClass"],
+        "type": "object"
+      },
+      "Fish": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Animal"
+          }
+        ],
+        "type": "object"
+      },
+      "Mammal": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Animal"
+          },
+          {
+            "properties": {
+              "classTypicalBreedingSize": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "required": ["classTypicalBreedingSize"],
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://springdoc.org"
+    },
+    "termsOfService": "http://swagger.io/terms/",
+    "title": "openapi quirks documentation",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.1",
+  "paths": {
+    "/boundary/muahaha": {
+      "get": {
+        "description": "Retrieves all actions",
+        "operationId": "list-animals",
+        "responses": {
+          "200": {
+            "content": {
+              "*/*": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Animal"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "OK"
+          }
+        },
+        "summary": "Finds all Actions",
+        "tags": ["boundary"]
+      }
+    }
+  },
+  "servers": [
+    {
+      "description": "Generated server url",
+      "url": "http://localhost:8080"
+    }
+  ]
+}
